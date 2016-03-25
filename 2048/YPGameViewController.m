@@ -178,7 +178,6 @@ static const CGFloat kContentViewSpace = 10;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",NSHomeDirectory());
     [self addGameSaveDelegate];
     [self creatUI];
     [self InitializedData];
@@ -346,8 +345,10 @@ static const CGFloat kContentViewSpace = 10;
             CGRect rect = CGRectMake( borderWidth + j * (borderWidth + cellWidth), borderWidth + i * (borderWidth + cellWidth), cellWidth , cellWidth);
             YPCellView *cell = [[YPCellView alloc] initWithFrame:rect borderWidth:borderWidth];
             if (valueArray[j]) {
+                if (isInit && [valueArray[j] integerValue] >= 2048) {
+                    isSuccess = YES;
+                }
                 cell.value = [valueArray[j] integerValue];
-                NSLog(@"%ld",cell.value);
             }
             [_contentView addSubview:cell];
             [array addObject:cell];
@@ -618,7 +619,6 @@ static const CGFloat kContentViewSpace = 10;
 /** 判断是否有相同失败 */
 - (void)judgeIsFail
 {
-
     // 向下方向
     NSMutableArray* tmpArray = [[NSMutableArray alloc]init];
     for (int i = 0; i < self.gameMode; i++) {

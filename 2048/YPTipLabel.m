@@ -15,7 +15,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         self.textColor = [UIColor theme32BackgroundColor];
-        self.font = [UIFont boldSystemFontOfSize:18];
+        self.font = [UIFont boldSystemFontOfSize:15];
         self.textAlignment = NSTextAlignmentRight;
         self.adjustsFontSizeToFitWidth = YES;
         self.hidden = YES;

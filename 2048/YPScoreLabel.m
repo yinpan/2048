@@ -29,7 +29,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         for (int i = 0; i < 4 ; i++) {
-            YPTipLabel *tipLabel = [[YPTipLabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(frame) * 0.5, CGRectGetHeight(frame) * 0.5 - 20, CGRectGetWidth(frame) * 0.5, 25)];
+            YPTipLabel *tipLabel = [[YPTipLabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame) * 0.5 - 20, CGRectGetWidth(frame), 25)];
             [self addSubview:tipLabel];
             [self.tipArray addObject:tipLabel];
         }
