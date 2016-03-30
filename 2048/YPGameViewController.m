@@ -29,11 +29,6 @@
 
 
 
-typedef NS_ENUM(NSInteger, YPGameMode) {
-    YPGameMode4= 4,
-    YPGameMode6= 6,
-    YPGameMode8= 8
-};
 
 
 typedef void(^YPRunCodeBlock)();
@@ -48,7 +43,6 @@ static const CGFloat kContentViewSpace = 10;
 @property (nonatomic, strong) UILabel *bestScoreLabel;
 @property (nonatomic, strong) YPScoreLabel *currentScoreLabel;
 @property (nonatomic, strong) UILabel *bestTypeLabel;
-@property (nonatomic, assign) YPGameMode gameMode;
 @property (nonatomic, assign) Direction direction;
 @property (nonatomic, strong) UIView *gameModeMenuView;
 
@@ -379,7 +373,7 @@ static const CGFloat kContentViewSpace = 10;
 #pragma mark - 加载数据
 - (void)InitializedData
 {
-    self.gameMode = [[YPManager userObjectWithKey:KEY_GAME_MODE] integerValue]?:YPGameMode4;
+    
     switch (self.gameMode) {
         case YPGameMode6:
             self.bestGrade = [[YPManager userObjectWithKey:KEY_BESTGRADE_GAMEMODE_6] integerValue]?:0;
@@ -922,6 +916,30 @@ static const CGFloat kContentViewSpace = 10;
 }
 
 
+- (void)setActionMode:(YPGameMode)actionMode
+{
+    if (self.gameMode != actionMode) {
+        self.gameMode = actionMode;
+        [self loadGameMode:NO];
+        _bestTypeLabel.text = [NSString stringWithFormat:@"%ld",self.gameMode];
+        switch (self.gameMode) {
+            case 6:
+                _bestScoreLabel.text = [YPManager userObjectWithKey:KEY_BESTGRADE_GAMEMODE_6]?:@"0";
+                break;
+            case 8:
+                _bestScoreLabel.text = [YPManager userObjectWithKey:KEY_BESTGRADE_GAMEMODE_8]?:@"0";
+                break;
+            default:
+                _bestScoreLabel.text = [YPManager userObjectWithKey:KEY_BESTGRADE_GAMEMODE_4]?:@"0";
+                break;
+        }
+        _bestGrade = [_bestScoreLabel.text integerValue];
+        self.nowGrade = 0;
+        isSuccess = NO;
+        isNewRecord = NO;
+    }
+    
+}
 
 
 #pragma mark -- 保存数据

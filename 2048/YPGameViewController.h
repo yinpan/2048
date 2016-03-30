@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, YPGameMode) {
+    YPGameMode4= 4,
+    YPGameMode6= 6,
+    YPGameMode8= 8
+};
 
 @interface YPGameViewController : UIViewController
 
+@property (nonatomic, assign) YPGameMode gameMode;
+
+@property (nonatomic, assign) YPGameMode actionMode;
 
 @end

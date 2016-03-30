@@ -82,7 +82,7 @@
             [_okButton setTitle:@"OK" forState:UIControlStateNormal];
             _contentLabel.text = [NSString stringWithFormat:@"New Record: %ld",record];
             _titleLabel.text = @"New";
-            _okButton.transform = CGAffineTransformMakeTranslation(- CGRectGetWidth(self.frame) * 0.2, 0);
+            _okButton.transform = CGAffineTransformMakeTranslation(- CGRectGetWidth(self.frame) * 0.175, 0);
             _cancelButton.hidden = YES;
             _okButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
             break;

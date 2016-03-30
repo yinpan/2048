@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YPGameViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,24 @@
 
 @implementation AppDelegate
 
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    YPGameViewController *gameVC = (YPGameViewController *)self.window.rootViewController;
+    if ([shortcutItem.type isEqualToString:@"8"]) {
+        gameVC.actionMode = YPGameMode8;
+    }else if([shortcutItem.type isEqualToString:@"6"]){
+        gameVC.actionMode = YPGameMode6;
+    }else{
+        gameVC.actionMode = YPGameMode4;
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor = [UIColor whiteColor];
+    _window.rootViewController = [YPGameViewController new];
+    [_window makeKeyAndVisible];
     return YES;
 }
 
