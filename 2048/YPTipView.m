@@ -54,7 +54,7 @@
         _cancelButton.layer.masksToBounds = YES;
         _cancelButton.backgroundColor = [UIColor themeScoreButtonColor];
         
-        _okButton = [[UIButton alloc] initWithFrame:CGRectMake(w * 0.55, w * 0.65, w * 0.25, 36)];
+        _okButton = [[UIButton alloc] initWithFrame:CGRectMake(w * 0.6, w * 0.65, w * 0.25, 36)];
         [_okButton addTarget:self action:@selector(okButtonCliked) forControlEvents:UIControlEventTouchUpInside];
         [_okButton setTitle:@"Continue" forState:UIControlStateNormal];
         _okButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -74,7 +74,7 @@
             [_okButton setTitle:@"OK" forState:UIControlStateNormal];
             _contentLabel.text = @"Fail,try again";
             _titleLabel.text = @"Fail";
-            _okButton.transform = CGAffineTransformMakeTranslation(- CGRectGetWidth(self.frame) * 0.2, 0);
+            _okButton.transform = CGAffineTransformMakeTranslation(- CGRectGetWidth(self.frame) * 0.225, 0);
             _cancelButton.hidden = YES;
             _okButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
             break;
@@ -82,7 +82,7 @@
             [_okButton setTitle:@"OK" forState:UIControlStateNormal];
             _contentLabel.text = [NSString stringWithFormat:@"New Record: %ld",record];
             _titleLabel.text = @"New";
-            _okButton.transform = CGAffineTransformMakeTranslation(- CGRectGetWidth(self.frame) * 0.175, 0);
+            _okButton.transform = CGAffineTransformMakeTranslation(- CGRectGetWidth(self.frame) * 0.225, 0);
             _cancelButton.hidden = YES;
             _okButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
             break;
@@ -90,7 +90,7 @@
             [_okButton setTitle:@"Continue" forState:UIControlStateNormal];
             _contentLabel.text = @"Good job,you get the 2048";
             _titleLabel.text = @"New Record";
-            _okButton.transform = CGAffineTransformMakeTranslation(- CGRectGetWidth(self.frame) * 0.2, 0);
+            _okButton.transform = CGAffineTransformMakeTranslation(- CGRectGetWidth(self.frame) * 0.225, 0);
             _cancelButton.hidden = YES;
             _okButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
             break;
