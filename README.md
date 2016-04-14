@@ -13,5 +13,3 @@ It's more than 2048 ,so just can call it 2048+.
 ![](http://7xs8gf.com1.z0.glb.clouddn.com/2048_IMG_0106.PNG)
 
 ![](http://7xs8gf.com1.z0.glb.clouddn.com/2048_IMG_0107.PNG)
-
-![](http://7xs8gf.com1.z0.glb.clouddn.com/2048_IMG_0104.PNG)
