@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  2048
 //
-//  Created by 千锋 on 15/12/28.
+//  Created by yinpan on 15/12/28.
 //  Copyright (c) 2015年 yinpans. All rights reserved.
 //
 

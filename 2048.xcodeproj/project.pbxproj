@@ -214,7 +214,8 @@
 				TargetAttributes = {
 					BC9172171C30FAA800E1EECC = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = F3ZCSW6X45;
+						DevelopmentTeam = XS7T2E96K5;
+						ProvisioningStyle = Automatic;
 					};
 					BC9172301C30FAA800E1EECC = {
 						CreatedOnToolsVersion = 6.4;
@@ -409,7 +410,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hao LUO (F3ZCSW6X45)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hao LUO (F3ZCSW6X45)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XS7T2E96K5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/2048",
@@ -420,7 +422,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yinpans.2048plus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c73e0e70-92e3-4d8a-9dd2-affe2bcdc9ce";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -429,7 +431,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hao LUO (F3ZCSW6X45)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hao LUO (F3ZCSW6X45)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XS7T2E96K5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/2048",
@@ -440,7 +443,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yinpans.2048plus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c73e0e70-92e3-4d8a-9dd2-affe2bcdc9ce";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

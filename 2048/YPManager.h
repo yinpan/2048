@@ -2,7 +2,7 @@
 //  YPManager.h
 //  2048
 //
-//  Created by 千锋 on 16/3/17.
+//  Created by yinpan on 16/3/17.
 //  Copyright © 2016年 yinpans. All rights reserved.
 //
 
