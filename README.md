@@ -8,10 +8,5 @@ It's more than 2048 ,so just can call it 2048+.
 
 ## Screenshot
 
-![-w500](http://7xs8gf.com1.z0.glb.clouddn.com/2048_IMG_0105.PNG)
-
-![-w500](http://7xs8gf.com1.z0.glb.clouddn.com/2048_IMG_0106.PNG)
-
-![-w500](http://7xs8gf.com1.z0.glb.clouddn.com/2048_IMG_0107.PNG)
-
+![2048+](./design/2048+.jpg)
 
